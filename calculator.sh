@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 
 while true
 do
@@ -21,23 +21,11 @@ do
                 read -p "Enter first number : " num1
                 read -p "Enter second number : " num2
 
-                if [ $choice -eq 1 ]
-                then
-
-                        echo "Sum of $num1 and $num2 : $(( $num1 + $num2 ))"
-                
-                elif [ $choice -eq 2 ]
-                then
-                        echo "Subtraction of $num1 and $num2 : $(( $num1 - $num2 ))"
-
-
-                elif [ $choice -eq 3 ]
-                then
-                        echo "Multiplication of $num1 and $num2 : $(( $num1 * $num2 ))"
-
-                elif [ $choice -eq 4 ]
-                then
-                        echo "Division of $num1 and $num2 : $(( $num1 / $num2 ))"
-                fi
+                case $choice in
+                        1) echo "Sum of $num1 and $num2 : $(( $num1 + $num2 ))" ;;
+                        2) echo "Difference of $num1 and $num2 : $(( $num1 - $num2 ))" ;;  
+                        3) echo "Product of $num1 and $num2 : $(( $num1 * $num2 ))" ;;
+                        4) echo "Quotient of $num1 and $num2 : $(( $num1 / $num2 ))" ;;
+                esac
         fi
 done
