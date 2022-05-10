@@ -6,14 +6,15 @@ do
         echo "2. Subtract"
         echo "3. Multiply"
         echo "4. Divide"
-        echo "5. Quit"
+        echo "5. Average"
+        echo "6. Quit"
         read -p "Enter choice : " choice
 
-        if [ $choice -eq 5 ]
+        if [ $choice -eq 6 ]
         then
                 break
 
-        elif [ $choice -lt 1 ] || [ $choice -gt 5 ]
+        elif [ $choice -lt 1 ] || [ $choice -gt 6 ]
         then
                 continue
         
@@ -26,6 +27,7 @@ do
                         2) echo "Difference of $num1 and $num2 : $(( $num1 - $num2 ))" ;;  
                         3) echo "Product of $num1 and $num2 : $(( $num1 * $num2 ))" ;;
                         4) echo "Quotient of $num1 and $num2 : $(( $num1 / $num2 ))" ;;
+                        5) echo "Average of $num1 and $num2 : $(( ($num1 + $num2) / 2 ))" ;;
                 esac
         fi
 done
